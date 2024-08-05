@@ -1,2 +1,2 @@
 # FuegoDeQuasar
-La Operación Fuego de Quasar es un sistema de comunicación y localización desarrollado en Go por la Alianza Rebelde para interceptar y descifrar mensajes de socorro de naves imperiales. 
+La Operación Fuego de Quasar es un sistema de comunicación y localización desarrollado en Go por la Alianza Rebelde para interceptar y descifrar mensajes de socorro de naves imperiales. Liderado por el General Han Solo, el objetivo del sistema es triangular la posición de una nave portacarga imperial a la deriva en un campo de asteroides y reconstruir el mensaje de auxilio transmitido por la nave.
