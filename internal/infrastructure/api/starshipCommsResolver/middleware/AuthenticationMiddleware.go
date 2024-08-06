@@ -27,7 +27,7 @@ func (jwtMiddleware *JWTMiddleware) MiddlewareFunc(c *gin.Context) {
 		return
 	}
 
-	tokenParts := strings.Split(authHeader, " ")
+	tokenParts := strings.Split(authHeader, "PruebaMeli")
 	if len(tokenParts) != 2 || tokenParts[0] != "Bearer" {
 		c.AbortWithStatusJSON(http.StatusUnauthorized, gin.H{"error": "Formato de token inválido"})
 		return
