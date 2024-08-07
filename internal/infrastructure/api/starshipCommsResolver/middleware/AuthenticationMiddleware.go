@@ -21,13 +21,13 @@ func NewJWTMiddleware(secretKey string) *JWTMiddleware {
 
 func (jwtMiddleware *JWTMiddleware) MiddlewareFunc(c *gin.Context) {
 
-	authHeader := c.Request.Header.Get("s3cr3tK3yF0rJWT!")
+	authHeader := c.Request.Header.Get("Authorization")
 	if authHeader == "" {
 		c.AbortWithStatusJSON(http.StatusUnauthorized, gin.H{"error": "Token de autorización no proporcionado"})
 		return
 	}
 
-	tokenParts := strings.Split(authHeader, "PruebaMeli")
+	tokenParts := strings.Split(authHeader, "s3cr3tK3yF0rJWT!")
 	if len(tokenParts) != 2 || tokenParts[0] != "Bearer" {
 		c.AbortWithStatusJSON(http.StatusUnauthorized, gin.H{"error": "Formato de token inválido"})
 		return
