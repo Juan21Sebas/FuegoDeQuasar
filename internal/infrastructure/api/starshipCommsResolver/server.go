@@ -16,7 +16,7 @@ import (
 func CreateServer(db *sql.DB) *gin.Engine {
 	server := gin.Default()
 
-	jwtMiddleware := middleware.NewJWTMiddleware("")
+	jwtMiddleware := middleware.NewJWTMiddleware("s3cr3tK3yF0rJWT!")
 
 	server.Use(jwtMiddleware.MiddlewareFunc)
 
