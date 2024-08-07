@@ -21,7 +21,7 @@ func NewJWTMiddleware(secretKey string) *JWTMiddleware {
 
 func (jwtMiddleware *JWTMiddleware) MiddlewareFunc(c *gin.Context) {
 
-	authHeader := c.Request.Header.Get("Authorization")
+	authHeader := c.Request.Header.Get("s3cr3tK3yF0rJWT!")
 	if authHeader == "" {
 		c.AbortWithStatusJSON(http.StatusUnauthorized, gin.H{"error": "Token de autorización no proporcionado"})
 		return
